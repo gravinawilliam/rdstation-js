@@ -18,7 +18,7 @@ export default class Authentication {
             throw new Error('Authentication::getAccessToken(): Request failed on response.');
         }
 
-        return new AccessToken(this, response['access_token'], response['expires_in'], esponse['refresh_token']);
+        return new AccessToken(this, response['access_token'], response['expires_in'], response['refresh_token']);
     }
 
     refreshAccessToken(refreshToken) {
